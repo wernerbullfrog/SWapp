@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 
-const { getAllQueryType } = require("./Handlers/SwApiHandlers");
+const { getAllQueryType, getSearchQuery } = require("./Handlers/SwApiHandlers");
 const PORT = 8000;
 
 express()
@@ -20,6 +20,7 @@ express()
   })
   // API endpoints
   .get("/api/:QueryType", getAllQueryType)
+  .get("/api/people/search/", getSearchQuery)
 
   .get("*", (req, res) => {
     res.status(404).json({
