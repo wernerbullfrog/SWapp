@@ -1,7 +1,7 @@
 import React from "react";
 
 const PeoplePage = () => {
-  return;
+  return <></>;
 };
 
 export default PeoplePage;

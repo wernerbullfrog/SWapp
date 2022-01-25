@@ -1,15 +1,11 @@
 import React from "react";
-import {
-  PageContainer,
-  WelcomeMessage,
-  SideImage,
-} from "../Stylings/PageStyling";
+import { PageContainer, SideMessage, SideImage } from "../Stylings/PageStyling";
 const LandingPage = () => {
   return (
     <PageContainer>
-      <WelcomeMessage>
+      <SideMessage>
         Welcome To the Ultimate Star Wars Page full of all your favorite info!{" "}
-      </WelcomeMessage>
+      </SideMessage>
       <SideImage src="" />
     </PageContainer>
   );
