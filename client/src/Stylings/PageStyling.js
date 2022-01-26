@@ -107,3 +107,14 @@ export const PeopleWrapper = styled.li`
   color: white;
   margin: 5px;
 `;
+
+export const ScrollBtn = styled.button`
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 50px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  background: none;
+`;

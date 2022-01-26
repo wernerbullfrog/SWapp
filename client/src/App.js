@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Header.js";
+import ScrollToTopBtn from "./InputsAndButtons/ScrollToTopBtn.js";
 import LandingPage from "./Pages/LandingPage";
 import PeoplePage from "./Pages/PeoplePage";
 import PlanetsPage from "./Pages/PlanetsPage";
@@ -14,6 +15,7 @@ const App = () => {
       <PeoplePage />
       <PlanetsPage />
       <StarshipsPage />
+      <ScrollToTopBtn />
       <Routes>
         <Route path="/home" element={<LandingPage />} />
         <Route path="/people" element={<PeoplePage />} />
