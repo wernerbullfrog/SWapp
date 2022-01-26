@@ -15,7 +15,7 @@ const StarshipsPage = () => {
       });
   }, []);
   return (
-    <PageContainer>
+    <PageContainer id={"StarshipsPage"}>
       <TextWrapper>
         <SideMessage>Starships</SideMessage>
         {starships.data ? (

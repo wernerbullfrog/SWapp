@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Header.js";
-import Page from "./Page.js";
 import LandingPage from "./Pages/LandingPage";
 import PeoplePage from "./Pages/PeoplePage";
 import PlanetsPage from "./Pages/PlanetsPage";
@@ -11,9 +10,12 @@ const App = () => {
   return (
     <BrowserRouter>
       <Header />
-      <Page />
+      <LandingPage />
+      <PeoplePage />
+      <PlanetsPage />
+      <StarshipsPage />
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/home" element={<LandingPage />} />
         <Route path="/people" element={<PeoplePage />} />
         <Route path="/planets" element={<PlanetsPage />} />
         <Route path="/starships" element={<StarshipsPage />} />

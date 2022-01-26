@@ -43,6 +43,17 @@ export const SideMessage = styled.h1`
   color: white;
   font-size: 2em;
   opacity: 0.7;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
   @media (max-width: 1000px) {
     font-size: 30px;
     opacity: 1;
@@ -52,6 +63,7 @@ export const SideMessage = styled.h1`
 export const SideImage = styled.img`
   width: 300px;
   padding: 40px;
+
   @media (max-width: 1000px) {
     position: absolute;
     opacity: 0.3;

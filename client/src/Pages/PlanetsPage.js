@@ -15,7 +15,7 @@ const PlanetsPage = () => {
       });
   }, []);
   return (
-    <PageContainer>
+    <PageContainer id={"PlanetsPage"}>
       <SideImage src="https://tinyurl.com/syv96bby" />
       <TextWrapper>
         <SideMessage>Planets</SideMessage>

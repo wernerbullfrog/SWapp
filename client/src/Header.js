@@ -1,9 +1,10 @@
 import React from "react";
-import { HeaderContainer, Logo } from "./Stylings/HeaderStyling";
+import NavButtons from "./InputsAndButtons/NavButtons";
+import { HeaderContainer, Logo, SectionLink } from "./Stylings/HeaderStyling";
 const Header = () => {
   return (
     <HeaderContainer>
-      <Logo src="https://tinyurl.com/2j9st48w" alt="starwars logo" />
+      <NavButtons />
     </HeaderContainer>
   );
 };

@@ -8,7 +8,7 @@ import {
 } from "../Stylings/PageStyling";
 const PeoplePage = () => {
   return (
-    <PageContainer>
+    <PageContainer id={"PeoplePage"}>
       <TextWrapper>
         <SideMessage>Look for all your favorite charecters here!</SideMessage>
         <SearchBar />
