@@ -1,9 +1,11 @@
 import React from "react";
+import NavButtons from "../InputsAndButtons/NavButtons";
 import {
   PageContainer,
   SideMessage,
   SideImage,
   TextWrapper,
+  BtnContainer,
 } from "../Stylings/PageStyling";
 const LandingPage = () => {
   return (
@@ -13,6 +15,9 @@ const LandingPage = () => {
         <SideMessage>
           Welcome To the Ultimate Star Wars Page full of all your favorite info!{" "}
         </SideMessage>
+        <BtnContainer>
+          <NavButtons />
+        </BtnContainer>
       </TextWrapper>
     </PageContainer>
   );
