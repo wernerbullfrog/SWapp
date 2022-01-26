@@ -87,11 +87,11 @@ export const ResultsContainer = styled.ul`
     left: 30px;
     background-color: black;
     opacity: 0.6;
-    top: -25px;
     border-top: none;
   }
 `;
 
 export const PeopleWrapper = styled.li`
   color: white;
+  margin: 5px;
 `;

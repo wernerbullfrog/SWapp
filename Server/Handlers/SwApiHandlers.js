@@ -16,9 +16,9 @@ const getAllQueryType = (req, res) => {
     }
   });
 };
-
-const getSearchQuery = (req, res) => {
-  request(
+// having issue with slow API request maybe try a timeout
+const getSearchQuery = async (req, res) => {
+  await request(
     `https://swapi.dev/api/people/?search=${req.params.Query}`,
     { json: true },
     (err, body) => {

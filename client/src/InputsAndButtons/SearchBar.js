@@ -7,11 +7,15 @@ const SearchBar = () => {
   const [peopleResults, setPeopleResults] = useState([]);
 
   useEffect(() => {
-    fetch(`/api/search/${peopleSearch}`)
-      .then((res) => res.json())
-      .then((data) => {
-        data.data ? setPeopleResults(data) : setPeopleResults([]);
-      });
+    if (peopleSearch.length >= 2) {
+      fetch(`/api/search/${peopleSearch}`)
+        .then((res) => res.json())
+        .then((data) => {
+          setPeopleResults(data);
+        });
+    } else {
+      setPeopleResults([]);
+    }
   }, [peopleSearch]);
 
   return (
@@ -21,7 +25,11 @@ const SearchBar = () => {
         placeholder="Search for People"
         value={peopleSearch}
         onChange={(e) => {
-          setPeopleSearch(e.target.value);
+          if (e.target.value === "") {
+            setPeopleSearch("");
+          } else {
+            setPeopleSearch(e.target.value);
+          }
         }}
       />
       {peopleResults.data ? (
