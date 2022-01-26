@@ -19,8 +19,10 @@ express()
     next();
   })
   // API endpoints
-  .get("/api/:QueryType", getAllQueryType)
-  .get("/api/people/search/", getSearchQuery)
+  .get("/api/people/", getAllQueryType)
+  .get("/api/planets/", getAllQueryType)
+  .get("/api/starships/", getAllQueryType)
+  .get("/api/search/:Query", getSearchQuery)
 
   .get("*", (req, res) => {
     res.status(404).json({

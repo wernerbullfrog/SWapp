@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <Logo
-        src="https://cdn.freebiesupply.com/logos/large/2x/star-wars-4-logo-black-and-white.png"
+        src="https://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG9.png"
         alt="starwars logo"
       />
     </HeaderContainer>
