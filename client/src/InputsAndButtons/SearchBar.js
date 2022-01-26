@@ -3,12 +3,13 @@ import { PeopleSearchInput } from "../Stylings/PageStyling";
 const SearchBar = () => {
   const [peopleSearch, setPeopleSearch] = useState("");
   const [peopleResults, setPeopleResults] = useState([]);
+
   useEffect(() => {
-    fetch(`/api/people/search/${peopleSearch}`)
+    fetch(`/api/search/${peopleSearch}`)
       .then((res) => res.json())
       .then((data) => {
         setPeopleResults(data);
-        console.log(data);
+        console.log(peopleResults);
       });
   }, [peopleSearch]);
 
