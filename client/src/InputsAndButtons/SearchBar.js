@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { PeopleSearchInput } from "../Stylings/PageStyling";
+import { PeopleSearchInput, ResultsContainer } from "../Stylings/PageStyling";
+import SearchResults from "./SearchResults";
+
 const SearchBar = () => {
   const [peopleSearch, setPeopleSearch] = useState("");
   const [peopleResults, setPeopleResults] = useState([]);
@@ -8,8 +10,7 @@ const SearchBar = () => {
     fetch(`/api/search/${peopleSearch}`)
       .then((res) => res.json())
       .then((data) => {
-        setPeopleResults(data);
-        console.log(peopleResults);
+        data.data ? setPeopleResults(data) : setPeopleResults([]);
       });
   }, [peopleSearch]);
 
@@ -23,6 +24,15 @@ const SearchBar = () => {
           setPeopleSearch(e.target.value);
         }}
       />
+      {peopleResults.data ? (
+        <ResultsContainer>
+          {peopleResults.data.map((person) => (
+            <SearchResults person={person} />
+          ))}
+        </ResultsContainer>
+      ) : (
+        <></>
+      )}
     </>
   );
 };
