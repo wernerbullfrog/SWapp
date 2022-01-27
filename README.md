@@ -1,6 +1,6 @@
 # Star Wars API App
 
-> This app contains all the required functionality to view the SWapi with a clean and simple to use UI
+> This app contains all the required functionality to view the SWapi with a clean and simple to use UI it is a fully responsive single page scrollable app. I had a lot of fun working on it and used it as an opportunity to learn how to make a scrollable page with a "back to top" button.
 
 > here are the steps to properly start the app after cloning the repository
 

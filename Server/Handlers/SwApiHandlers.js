@@ -16,7 +16,7 @@ const getAllQueryType = (req, res) => {
     }
   });
 };
-// having issue with slow API request maybe try a timeout
+// This hamdler queries the people search api enpoint within SWAPI
 const getSearchQuery = async (req, res) => {
   await request(
     `https://swapi.dev/api/people/?search=${req.params.Query}`,

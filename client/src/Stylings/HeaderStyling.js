@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-scroll";
+// all the Header styling is stored in this component
 
+// ************************ DIVs ************************//
 export const HeaderContainer = styled.div`
   width: 100%;
   height: 200px;
@@ -10,12 +12,7 @@ export const HeaderContainer = styled.div`
   align-items: center;
 `;
 
-export const Logo = styled.img`
-  width: 200px;
-  :hover {
-    opacity: 0.7;
-  }
-`;
+// ************************ UL & LI ************************//
 export const LinkList = styled.ul`
   display: flex;
   padding: 10px;
@@ -36,6 +33,15 @@ export const ScrollLink = styled.li`
   }
 `;
 
+// ************************ IMGS ************************//
+export const Logo = styled.img`
+  width: 200px;
+  :hover {
+    opacity: 0.7;
+  }
+`;
+
+// ************************ Links ************************//
 export const SectionLink = styled(Link)`
   cursor: pointer;
   animation: fadeInAnimation ease 6s;

@@ -5,6 +5,8 @@ import {
   LinkList,
   ScrollLink,
 } from "../Stylings/HeaderStyling";
+// these links redirect the user to the position
+// on the page where the information is contained
 const NavButtons = () => {
   return (
     <>

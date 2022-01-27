@@ -4,6 +4,9 @@ import { ScrollBtn } from "../Stylings/PageStyling";
 
 const ScrollToTopBtn = () => {
   const [showButton, setShowButton] = useState(false);
+  // this use effect decerns whether to display the button
+  // the "back to top" button in reference to its position
+  // in the window
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.pageYOffset > 100) {
@@ -25,7 +28,7 @@ const ScrollToTopBtn = () => {
     <>
       {showButton && (
         <ScrollBtn onClick={scrollToTop}>
-          Back Up <FiArrowUp />
+          Back to Top <FiArrowUp />
         </ScrollBtn>
       )}
     </>

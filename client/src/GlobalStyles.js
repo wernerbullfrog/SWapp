@@ -1,8 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
-export const theme = {
-  accentColor: "yellow",
-};
+// GlobalStyles was used to facilitate font consistancy
+// to clean up the UL and LI
 
 export default createGlobalStyle`
   *,

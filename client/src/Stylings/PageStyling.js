@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+// ************************ DIVs ************************//
+// ************************ DIVs ************************//
+// ************************ DIVs ************************//
 export const PageContainer = styled.div`
   height: 100vh;
   display: flex;
@@ -36,60 +39,9 @@ export const BtnWrapper = styled.div`
   justify-content: space-between; ;
 `;
 
-export const SideMessage = styled.h1`
-  @media (max-width: 1000px) {
-    font-size: 30px;
-    font-weight: 400;
-    font-size: 40px;
-    color: rgba(255, 255, 255, 0.8);
-  }
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 60px;
-  font-weight: 100;
-  animation: fadeInAnimation ease 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  @keyframes fadeInAnimation {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-`;
-
-export const YodaImage = styled.img`
-  width: 400px;
-  padding: 40px;
-  @media (max-width: 1000px) {
-    position: absolute;
-    opacity: 0.5;
-    width: 500px;
-  }
-`;
-
-export const SideImage = styled.img`
-  width: 300px;
-  padding: 40px;
-  @media (max-width: 1000px) {
-    position: absolute;
-    opacity: 0.5;
-    width: 300px;
-    padding: 0px;
-  }
-`;
-
-export const PeopleSearchInput = styled.input`
-  border: 1px solid white;
-  color: white;
-  border-radius: 5px;
-  font-size: 1em;
-  padding-left: 10px;
-  width: 10em;
-  background: none;
-`;
-
+// ************************ UL & LI************************//
+// ************************ UL & LI************************//
+// ************************ UL & LI************************//
 export const ListWrapper = styled.ul`
   display: flex;
   flex-flow: column wrap;
@@ -136,6 +88,70 @@ export const ResultsContainer = styled.ul`
 export const PeopleWrapper = styled.li`
   color: white;
   margin: 5px;
+`;
+
+// ************************ TXT ************************//
+// ************************ TXT ************************//
+// ************************ TXT ************************//
+
+export const SideMessage = styled.h1`
+  @media (max-width: 1000px) {
+    font-size: 30px;
+    font-weight: 400;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 60px;
+  font-weight: 100;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+`;
+
+// ************************ IMGs ************************//
+// ************************ IMGs ************************//
+// ************************ IMGs ************************//
+export const YodaImage = styled.img`
+  width: 400px;
+  padding: 40px;
+  @media (max-width: 1000px) {
+    position: absolute;
+    opacity: 0.5;
+    width: 500px;
+  }
+`;
+
+export const SideImage = styled.img`
+  width: 300px;
+  padding: 40px;
+  @media (max-width: 1000px) {
+    position: absolute;
+    opacity: 0.5;
+    width: 300px;
+    padding: 0px;
+  }
+`;
+
+// ************************ INPUTS & BTNS ************************//
+// ************************ INPUTS & BTNS ************************//
+// ************************ INPUTS & BTNS ************************//
+export const PeopleSearchInput = styled.input`
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  font-size: 1em;
+  padding-left: 10px;
+  width: 10em;
+  background: none;
 `;
 
 export const ScrollBtn = styled.button`

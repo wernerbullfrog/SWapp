@@ -6,7 +6,9 @@ import {
   SideImage,
   TextWrapper,
 } from "../Stylings/PageStyling";
-
+// all the list components are coded generally the same way
+// the only major difference is the positions of the image
+// and the side message
 const PeopleListPage = () => {
   const [allPeople, setallPeople] = useState([]);
   useEffect(() => {
