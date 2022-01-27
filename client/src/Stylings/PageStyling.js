@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const PageContainer = styled.div`
   height: 100vh;
   display: flex;
+  min-height: 400px;
   justify-content: space-around;
   align-items: center;
   background: rgb(0, 0, 0);
@@ -27,6 +28,12 @@ export const TextWrapper = styled.div`
     width: 300px;
     z-index: 2;
   }
+`;
+
+export const BtnWrapper = styled.div`
+  display: flex;
+  width: 300px;
+  justify-content: space-between; ;
 `;
 
 export const SideMessage = styled.h1`
@@ -142,14 +149,46 @@ export const ScrollBtn = styled.button`
   padding: 10px;
   background: none;
   @media (max-width: 1000px) {
-    bottom: 100px;
-    right: 40%;
     opacity: 1;
     z-index: 100;
   }
   :hover {
     transition: all ease-in-out 0.5s;
-    opacity: 0.5;
-    border: thin Rgba(189, 114, 7, 0.6) solid;
+    opacity: 1;
+    border: thin Rgba(189, 114, 7, 1) solid;
+  }
+`;
+
+export const PageBtnRight = styled.button`
+  cursor: pointer;
+  border: thin Rgba(189, 114, 7, 0.1) solid;
+  color: Rgba(189, 114, 7, 0.8);
+  padding: 5px;
+  background: none;
+  :hover {
+    transition: all ease-in 0.5s;
+    opacity: 1;
+    border: thin Rgba(189, 114, 7, 0.5) solid;
+    transform: translateX(10px);
+  }
+  :disabled {
+    visibility: hidden;
+  }
+`;
+
+export const PageBtnLeft = styled.button`
+  cursor: pointer;
+  border: thin Rgba(189, 114, 7, 0.1) solid;
+  color: Rgba(189, 114, 7, 0.8);
+  padding: 5px;
+  background: none;
+  :hover {
+    transition: all ease-in 0.5s;
+    opacity: 1;
+    border: thin Rgba(189, 114, 7, 0.5) solid;
+    transform: translateX(-10px);
+  }
+  :disabled {
+    visibility: hidden;
   }
 `;

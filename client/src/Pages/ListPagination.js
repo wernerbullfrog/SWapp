@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import PaginationBtns from "../InputsAndButtons/PaginationBtns";
 import { ListItem, ListWrapper } from "../Stylings/PageStyling";
 const ListPagination = ({ List }) => {
   const [nextActive, setNextActive] = useState(false);
@@ -42,19 +43,22 @@ const ListPagination = ({ List }) => {
 
   return (
     <>
-      <ListWrapper>
-        {currentPage &&
-          currentPage.results.map((item) => <ListItem>{item.name}</ListItem>)}
-      </ListWrapper>
+      {currentPage && (
+        <>
+          <ListWrapper>
+            {currentPage.results.map((item) => (
+              <ListItem>{item.name}</ListItem>
+            ))}
+          </ListWrapper>
 
-      <div>
-        <button disabled={!currentPage.previous} onClick={handlePrevious}>
-          Previous
-        </button>
-        <button disabled={!currentPage.next} onClick={handleNext}>
-          Next
-        </button>
-      </div>
+          <PaginationBtns
+            disabledPrevious={!currentPage.previous}
+            disabledNext={!currentPage.next}
+            handlePrevious={handlePrevious}
+            handleNext={handleNext}
+          />
+        </>
+      )}
     </>
   );
 };

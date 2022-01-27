@@ -26,9 +26,13 @@ export const ScrollLink = styled.li`
   color: Rgba(189, 114, 7, 0.6);
   font-weight: 100;
   :hover {
-    transition: all ease-in-out 0.5s;
-    opacity: 0.7;
-    border-bottom: thin Rgba(189, 114, 7, 0.6) solid;
+    transition: all ease-in 0.2s;
+    opacity: 1;
+    border-bottom: thin Rgba(189, 114, 7, 1) solid;
+  }
+  @media (max-width: 1000px) {
+    font-size: 15px;
+    font-weight: 600;
   }
 `;
 
