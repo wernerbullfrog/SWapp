@@ -1,10 +1,10 @@
 import React from "react";
-import { PeopleWrapper } from "../Stylings/PageStyling";
+import { PeopleWrapper, ListItem } from "../Stylings/PageStyling";
 const SearchResults = ({ person }) => {
   //   console.log("person:", person);
   return (
     <PeopleWrapper>
-      <p>{person.name}</p>
+      <ListItem>{person.name}</ListItem>
     </PeopleWrapper>
   );
 };

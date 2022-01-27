@@ -3,7 +3,7 @@ import SearchBar from "../InputsAndButtons/SearchBar";
 import {
   PageContainer,
   SideMessage,
-  SideImage,
+  YodaImage,
   TextWrapper,
 } from "../Stylings/PageStyling";
 const PeoplePage = () => {
@@ -13,7 +13,7 @@ const PeoplePage = () => {
         <SideMessage>Look for all your favorite charecters here!</SideMessage>
         <SearchBar />
       </TextWrapper>
-      <SideImage src="https://tinyurl.com/2p9hy5xe" />
+      <YodaImage src="https://tinyurl.com/2p9hy5xe" />
     </PageContainer>
   );
 };

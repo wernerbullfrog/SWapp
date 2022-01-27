@@ -1,6 +1,6 @@
 import React from "react";
 import NavButtons from "./InputsAndButtons/NavButtons";
-import { HeaderContainer, Logo, SectionLink } from "./Stylings/HeaderStyling";
+import { HeaderContainer } from "./Stylings/HeaderStyling";
 const Header = () => {
   return (
     <HeaderContainer>

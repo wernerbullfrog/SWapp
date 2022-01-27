@@ -1,13 +1,4 @@
 import styled from "styled-components";
-const size = {
-  mobileS: "320px",
-  mobileM: "375px",
-  mobileL: "425px",
-  tablet: "768px",
-  laptop: "1024px",
-  laptopL: "1440px",
-  desktop: "2560px",
-};
 
 export const PageContainer = styled.div`
   height: 100vh;
@@ -29,8 +20,6 @@ export const PageContainer = styled.div`
   }
 `;
 
-export const BtnContainer = styled.div``;
-
 export const TextWrapper = styled.div`
   width: 500px;
   @media (max-width: 1000px) {
@@ -39,10 +28,17 @@ export const TextWrapper = styled.div`
     z-index: 2;
   }
 `;
+
 export const SideMessage = styled.h1`
-  color: white;
-  font-size: 2em;
-  opacity: 0.7;
+  @media (max-width: 1000px) {
+    font-size: 30px;
+    font-weight: 400;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 60px;
+  font-weight: 100;
   animation: fadeInAnimation ease 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -54,19 +50,24 @@ export const SideMessage = styled.h1`
       opacity: 1;
     }
   }
+`;
+
+export const YodaImage = styled.img`
+  width: 400px;
+  padding: 40px;
   @media (max-width: 1000px) {
-    font-size: 30px;
-    opacity: 1;
+    position: absolute;
+    opacity: 0.5;
+    width: 500px;
   }
 `;
 
 export const SideImage = styled.img`
   width: 300px;
   padding: 40px;
-
   @media (max-width: 1000px) {
     position: absolute;
-    opacity: 0.3;
+    opacity: 0.5;
     width: 300px;
     padding: 0px;
   }
@@ -80,8 +81,30 @@ export const PeopleSearchInput = styled.input`
   padding-left: 10px;
   width: 10em;
   background: none;
+`;
+
+export const ListWrapper = styled.ul`
+  display: flex;
+  flex-flow: column wrap;
+  width: 500px;
+  text-align: center;
+  align-items: flex-start;
+  overflow: hidden scroll;
   @media (max-width: 1000px) {
+    width: 400px;
+    flex-direction: column;
+    margin: 10px;
+    text-decoration: none;
   }
+`;
+
+export const ListItem = styled.li`
+  font-size: 30px;
+  font-weight: 100;
+  font-size: 20px;
+  padding-right: 100px;
+  margin: 5px;
+  text-align: center;
 `;
 
 export const ResultsContainer = styled.ul`
@@ -112,9 +135,21 @@ export const ScrollBtn = styled.button`
   position: fixed;
   bottom: 20px;
   right: 20px;
-  font-size: 50px;
+  font-size: 20px;
   cursor: pointer;
   border: none;
-  color: white;
+  color: Rgba(189, 114, 7, 0.6);
+  padding: 10px;
   background: none;
+  @media (max-width: 1000px) {
+    bottom: 100px;
+    right: 40%;
+    opacity: 1;
+    z-index: 100;
+  }
+  :hover {
+    transition: all ease-in-out 0.5s;
+    opacity: 0.5;
+    border: thin Rgba(189, 114, 7, 0.6) solid;
+  }
 `;

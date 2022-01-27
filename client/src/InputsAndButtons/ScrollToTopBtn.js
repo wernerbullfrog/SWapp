@@ -6,7 +6,7 @@ const ScrollToTopBtn = () => {
   const [showButton, setShowButton] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 640) {
+      if (window.pageYOffset > 100) {
         setShowButton(true);
       } else {
         setShowButton(false);
@@ -25,7 +25,7 @@ const ScrollToTopBtn = () => {
     <>
       {showButton && (
         <ScrollBtn onClick={scrollToTop}>
-          <FiArrowUp />
+          Back Up <FiArrowUp />
         </ScrollBtn>
       )}
     </>

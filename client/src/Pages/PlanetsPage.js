@@ -4,6 +4,8 @@ import {
   SideMessage,
   SideImage,
   TextWrapper,
+  ListItem,
+  ListWrapper,
 } from "../Stylings/PageStyling";
 const PlanetsPage = () => {
   const [planets, setPlanets] = useState([]);
@@ -19,11 +21,13 @@ const PlanetsPage = () => {
       <SideImage src="https://tinyurl.com/syv96bby" />
       <TextWrapper>
         <SideMessage>Planets</SideMessage>
-        {planets.data ? (
-          planets.data.map((planet) => <p>{planet.name}</p>)
-        ) : (
-          <></>
-        )}
+        <ListWrapper>
+          {planets.data ? (
+            planets.data.map((planet) => <ListItem>{planet.name}</ListItem>)
+          ) : (
+            <></>
+          )}
+        </ListWrapper>
       </TextWrapper>
     </PageContainer>
   );
