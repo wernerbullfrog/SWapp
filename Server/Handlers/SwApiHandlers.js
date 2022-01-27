@@ -23,7 +23,6 @@ const getSearchQuery = async (req, res) => {
     { json: true },
     (err, body) => {
       try {
-        console.log(req.params.Query);
         return res
           .status(200)
           .json({ data: body.body.results, Message: "You found them" });
