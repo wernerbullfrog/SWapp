@@ -7,7 +7,7 @@ const getAllQueryType = (req, res) => {
     try {
       return res
         .status(200)
-        .json({ data: body.body.results, Message: "You found them" });
+        .json({ data: body.body, Message: "You found them" });
     } catch (err) {
       return res.status(404).json({
         Error: err,

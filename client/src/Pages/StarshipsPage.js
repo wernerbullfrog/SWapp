@@ -4,9 +4,8 @@ import {
   SideMessage,
   SideImage,
   TextWrapper,
-  ListItem,
-  ListWrapper,
 } from "../Stylings/PageStyling";
+import ListPagination from "./ListPagination";
 const StarshipsPage = () => {
   const [starships, setStarships] = useState([]);
   useEffect(() => {
@@ -20,12 +19,7 @@ const StarshipsPage = () => {
     <PageContainer id={"StarshipsPage"}>
       <TextWrapper>
         <SideMessage>Starships</SideMessage>
-        <ListWrapper>
-          {starships.data &&
-            starships.data.map((starship) => (
-              <ListItem>{starship.name}</ListItem>
-            ))}
-        </ListWrapper>
+        {starships.data && <ListPagination List={starships} />}
       </TextWrapper>
       <SideImage src="https://tinyurl.com/2z4w2vk4" />
     </PageContainer>

@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
+import ListPagination from "./ListPagination";
 import {
   PageContainer,
   SideMessage,
   SideImage,
   TextWrapper,
-  ListItem,
-  ListWrapper,
 } from "../Stylings/PageStyling";
 
 const PeopleListPage = () => {
@@ -22,15 +21,7 @@ const PeopleListPage = () => {
       <SideImage src="https://tinyurl.com/ybt3fk8m" />
       <TextWrapper>
         <SideMessage>All People</SideMessage>
-        <ListWrapper>
-          {allPeople.data ? (
-            allPeople.data.map((people) => (
-              <ListItem key={people.height}>{people.name}</ListItem>
-            ))
-          ) : (
-            <></>
-          )}
-        </ListWrapper>
+        {allPeople.data && <ListPagination List={allPeople} />}
       </TextWrapper>
     </PageContainer>
   );
